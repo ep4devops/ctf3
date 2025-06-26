@@ -1,0 +1,22 @@
+name: SecDim
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  secdim:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@09d2acae674a48949e3602304ab46fd20ae0c42f
+
+      - name: Set up Python
+        uses: actions/setup-python@12648859835f68b273febdd9aab9972bbb624d8c
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          PIP_NO_CACHE_DIR=off pip install --no-build-isolation --no-index --find-links=./packages -r requirements.txt

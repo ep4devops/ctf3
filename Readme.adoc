@@ -1,0 +1,41 @@
+= SecDim's Defensive Programming challenge
+Github CI/CD
+
+An action retrieved from a third-party GitHub repository should be pinned to a full-length commit SHA. Currently, the only way to ensure an action remains immutable is by pinning it to a specific commit SHA. This approach reduces the risk of malicious actors introducing backdoors into the action's repository since doing so would require generating a SHA-1 collision for a legitimate Git object payload.
+
+== Objective
+
+Find the security weakness in GitHub workflow and effectively fix it.
+
+== Usage
+
+. Create a new empty GitHub repository.
+. Clone it locally
+. Copy this repository files to the new Github repository.
+. Ensure to include `.github/` directory.
+. Commit and push the changes to the `master` branch.
+. Go to the Actions tab in the repository to monitor the workflow run.
+
+TIP: You can install and run https://nektosact.com/introduction.html[act]
+to run Github Actions locally on your workstation.
+
+* Install https://nektosact.com/introduction.html[act]
+* `make run` to run the Github workflow locally
+* `make push` to git add, commit and push
+* `make status` to retrieve test output from the server
+
+Push you code to the SecDim remote repository.
+Go to the challenge tab.
+Security tests will run against your code.
+If tests pass you will get the challenge score.
+
+== Important notes
+
+. Push only to `master` branch.
+. Usability tests must always pass.
+. All tests will be overwritten on the server.
+. Security tests are not given in your repository.
+
+== Troubleshooting
+
+Ask your question on https://discuss.secdim.com[SecDim Discuss]
