@@ -1,2 +1,9 @@
 Flask==3.1.1
-markupsafe>=2.1.1
+markupsafe
+click
+blinker
+flask
+itsdangerous
+jinja2
+MarkupSafe
+werkzeug
